@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LMDXPS Documentation – 3PL Company User</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafc;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #004aad, #0077ff);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    section h2 {
+      color: #004aad;
+      margin-top: 0;
+      font-size: 1.4rem;
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 0.5rem;
+    }
+    .purpose {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+    .notes {
+      background: #f1f7ff;
+      border-left: 4px solid #0077ff;
+      padding: 0.8rem 1rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+    }
+    .ceo-shocker {
+      background: #fff3cd;
+      border-left: 4px solid #ffb300;
+      padding: 0.8rem 1rem;
+      margin-top: 0.8rem;
+      border-radius: 4px;
+      font-weight: bold;
+      color: #7a4e00;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📑 LMDXPS Documentation – 3PL Company User</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- 1 -->
+    <section>
+      <h2>1. Login Screen</h2>
+      <p class="purpose">Purpose: Allow 3PL companies and contractors to securely log in and access the system.</p>
+      <ul>
+        <li>Email (input)</li>
+        <li>Password (input, masked)</li>
+        <li>Remember Me (checkbox)</li>
+        <li>Forgot Password (link)</li>
+        <li>Login (button)</li>
+        <li>Sign Up (link for new users)</li>
+        <li>Driver Login (separate link for drivers)</li>
+      </ul>
+      <div class="notes">Future: Add 2FA (Two-Factor Authentication) for security.</div>
+      <div class="ceo-shocker">CEO-shocker: “This is the front door of our logistics empire. If it’s weak, the whole house collapses.”</div>
+    </section>
+
+    <!-- 2 -->
+    <section>
+      <h2>2. Dashboard</h2>
+      <p class="purpose">Purpose: Give the 3PL company a bird’s-eye view of operations: active routes, completed routes, and pending requests.</p>
+      <ul>
+        <li>Active Routes (card)</li>
+        <li>Completed Routes (card)</li>
+        <li>Pending Route Requests (card)</li>
+        <li>Completed Routes with no Invoice (table)</li>
+        <li>Top 10 Upcoming Deliveries (table)</li>
+        <li>Post Route (button)</li>
+      </ul>
+      <div class="notes">Future: Add AI alerts (e.g., “5 routes delayed, 2 contractors underperforming”).</div>
+      <div class="ceo-shocker">CEO-shocker: “This is the control tower of our logistics airport.”</div>
+    </section>
+
+    <!-- 3 -->
+    <section>
+      <h2>3. Post Route</h2>
+      <p class="purpose">Purpose: Enable 3PLs to create and publish new transportation routes for contractors to accept.</p>
+      <ul>
+        <li>Custom Route Number (input)</li>
+        <li>Warehouse ID (dropdown)</li>
+        <li>Truck Size Needed (dropdown)</li>
+        <li>Payment Method (radio: Paid by 3PL / Paid through LMDXPS)</li>
+        <li>Route Rate Based On (radio: Estimated Rate, Per Stop, % of Item Value)</li>
+        <li>Estimated Route Rate (number input)</li>
+        <li>Product Types (multi-select)</li>
+        <li>Number of Pieces (number input)</li>
+        <li>Number of Stops (number input)</li>
+        <li>Cubes (capacity input)</li>
+        <li>Pickup Date/Time (date & time picker)</li>
+        <li>Pickup Location / Furthest Location (text input)</li>
+        <li>Total Distance in Miles (number input)</li>
+        <li>Is 3-Man Team Needed? (yes/no)</li>
+        <li>Distance Pay? (yes/no)</li>
+        <li>Notes (textarea)</li>
+        <li>Next / Cancel Route (buttons)</li>
+      </ul>
+      <div class="notes">Future: Auto-suggest truck size & cost using AI.</div>
+      <div class="ceo-shocker">CEO-shocker: “This is where money meets movement. Every route posted is a revenue opportunity.”</div>
+    </section>
+
+    <!-- 4 -->
+    <section>
+      <h2>4. Post Routes in Bulk</h2>
+      <p class="purpose">Purpose: Allow 3PLs to upload multiple routes at once (time-saving for large operations).</p>
+      <ul>
+        <li>Upload (button)</li>
+        <li>Download Template (link)</li>
+        <li>Routes Table (Warehouse ID, Truck Size, Est. Rate, Stops, Actions)</li>
+      </ul>
+      <div class="notes">Future: Integrate with Excel/CSV auto-import.</div>
+      <div class="ceo-shocker">CEO-shocker: “This is scalability in action. One click, hundreds of routes.”</div>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <h2>5. Active Routes</h2>
+      <p class="purpose">Purpose: Track all ongoing routes (open or booked).</p>
+      <ul>
+        <li>Search (input)</li>
+        <li>Filters (Warehouse, Contractor, Date)</li>
+        <li>Tabs: Open / Booked</li>
+        <li>Routes Table (Route No, Contractor Requests, Status, Stops, Pickup Date/Time, Warehouse ID)</li>
+        <li>Post New Route (button)</li>
+      </ul>
+      <div class="notes">Future: Add real-time GPS tracking.</div>
+      <div class="ceo-shocker">CEO-shocker: “This is the heartbeat of the logistics system.”</div>
+    </section>
+
+    <!-- 6 -->
+    <section>
+      <h2>6. Completed Routes</h2>
+      <p class="purpose">Purpose: View all finished routes and their final status.</p>
+      <ul>
+        <li>Filters (Warehouse, Contractor, Date)</li>
+        <li>Routes Table (Route, Contractor, Truck, Driver, Status, Final Rate, Est. Rate)</li>
+      </ul>
+      <div class="notes">Future: Auto-generate completion certificates.</div>
+      <div class="ceo-shocker">CEO-shocker: “Completed routes = completed revenue cycles.”</div>
+    </section>
+
+    <!-- 7 -->
+    <section>
+      <h2>7. Cancelled Routes</h2>
+      <p class="purpose">Purpose: Track cancelled routes for accountability and analysis.</p>
+      <ul>
+        <li>Filters (Warehouse, Contractor, Date)</li>
+        <li>Routes Table (Route, Contractor, Truck, Driver, Warehouse, Status, Posted At)</li>
+      </ul>
+      <div class="notes">Future: Add cancellation reasons & penalties.</div>
+      <div class="ceo-shocker">CEO-shocker: “Cancelled routes are lost money. We must minimize them.”</div>
+    </section>
+
+    <!-- 8 -->
+    <section>
+      <h2>8. Route Logs</h2>
+      <p class="purpose">Purpose: Provide a history of all route-related actions.</p>
+      <ul>
+        <li>Search (input)</li>
+        <li>Date Range (from/to)</li>
+        <li>Logs Table (Date, Route, Details, Action By)</li>
+      </ul>
+      <div class="notes">Future: Add audit trail export for compliance.</div>
+      <div class="ceo-shocker">CEO-shocker: “Logs are the black box of our logistics plane.”</div>
+    </section>
+
+    <!-- 9 -->
+    <section>
+      <h2>9. Contractors – Available Trucks</h2>
+      <p class="purpose">Purpose: Show available trucks from contractors for assignment.</p>
+      <ul>
+        <li>Table (Contractor, Truck Type, Driver, Status, Date, Product Type, Location)</li>
+        <li>Pagination</li>
+      </ul>
+      <div class="notes">Future: Add truck GPS + live availability.</div>
+      <div class="ceo-shocker">CEO-shocker: “This is our fleet marketplace.”</div>
+    </section>
+
+    <!-- 10 -->
+    <section>
+      <h2>10. Contractors – My Truck Requests</h2>
+      <p class="purpose">Purpose: Track trucks requested by the 3PL.</p>
+      <ul>
+        <li>Filters (Date Range, Request Status)</li>
+        <li>Table (Needed Date, 3PL, Driver, Truck, Route, Date Sent, Status)</li>
+      </ul>
+      <div class="notes">Future: Add auto-matching with available trucks.</div>
+      <div class="ceo-shocker">CEO-shocker: “Requests are demand signals. They show where the market is hungry.”</div>
+    </section>
+
+    <!-- 11 -->
+    <section>
+      <h2>11. Billing – Invoices</h2>
+      <p class="purpose">Purpose: Manage invoices for completed routes.</p>
+      <ul>
+        <li>Filter by Invoice Type</li>
+        <li>Table (Invoice No, Paid For, Issued Date, Due Date, Status, Transaction Status, Payment Direction)</li>
+      </ul>
+      <div class="notes">Future: Add auto-payments & blockchain receipts.</div>
+      <div class="ceo-shocker">CEO-shocker: “Invoices are the cash register of logistics.”</div>
+    </section>
+
+    <!-- 12 -->
+    <section>
+      <h2>12. Messages & Issues – Raise an Issue</h2>
+      <p class="purpose">Purpose: Allow 3PLs to report problems (address, delays, contractor issues).</p>
+      <ul>
+        <li>Issue Type (dropdown)</li>
+        <li>Issue Title (input)</li>
+        <li>Route (dropdown)</li>
+        <li>Issue Details (textarea)</li>
+        <li>Submit (button)</li>
+      </ul>
+      <div class="notes">Future: Add AI issue categorization.</div>
+      <div class="ceo-shocker">CEO-shocker: “Issues are early warning signals. Fix them fast, save millions.”</div>
+    </section>
+
+    <!-- 13 -->
+    <section>
+      <h2>13. Settings – Personal Details</h2>
+      <p class="purpose">Purpose: Manage personal account details.</p>
+      <ul>
+        <li>First Name, Last Name, Email (inputs)</li>
+        <li>Edit (button)</li>
+      </ul>
+    </section>
+
+    <!-- 14 -->
+    <section>
+      <h2>14. Settings – Company Details</h2>
+      <p class="purpose">Purpose: Store company-level information and compliance documents.</p>
+      <ul>
+        <li>Company Name, Owner Name, Email, Phone, Address, City, State, Zip</li>
+        <li>FEIN#, USMC#, USDOT#, Expiration Date</li>
+        <li>Profile Description</li>
+        <li>MCP Permits (Number, Expiration, State)</li>
+      </ul>
+      <div class="notes">Future: Auto-validate compliance numbers with government APIs.</div>
+      <div class="ceo-shocker">CEO-shocker: “This is the identity card of the logistics company.”</div>
+    </section>
+
+    <!-- 15 -->
+    <section>
+      <h2>15. Settings – Warehouses</h2>
+      <p class="purpose">Purpose: Manage warehouse details.</p>
+      <ul>
+        <li>Warehouse ID, Phone, Product Types</li>
+        <li>Address, City, State, Zip</li>
+        <li>Warehouse Policies</li>
+      </ul>
+    </section>
+
+    <!-- 16 -->
+    <section>
+      <h2>16. Settings – Subscription Plan</h2>
+      <p class="purpose">Purpose: Allow 3PLs to choose a subscription tier.</p>
+      <ul>
+        <li>Plans: Essential, Pro, Elite, Titan</li>
+        <li>Pricing (per month)</li>
+        <li>Features (routes, truck access, dispatch, invoices)</li>
+        <li>Subscribe (button)</li>
+      </ul>
+      <div class="ceo-shocker">CEO-shocker: “Subscriptions = recurring revenue. This is what investors love.”</div>
+    </section>
+
+    <!-- 17 -->
+    <section>
+      <h2>17. Settings – Account Logs</h2>
+      <p class="purpose">Purpose: Track account activity (sign-ins, sign-ups).</p>
+      <ul>
+        <li>Table (Date, Action Type, Details, Action By)</li>
+      </ul>
+    </section>
+
+    <!-- 18 -->
+    <section>
+      <h2>18. Reports – Route Performance</h2>
+      <p class="purpose">Purpose: Measure performance of routes.</p>
+      <ul>
+        <li>KPIs: Number of Routes, Planned Stops, Completed Stops, Completion Rate</li>
+        <li>Filters (Date, Warehouse, Status, Rate Status)</li>
+        <li>Export (button)</li>
+      </ul>
+    </section>
+
+    <!-- 19 -->
+    <section>
+      <h2>19. Reports – Contractor Performance</h2>
+      <p class="purpose">Purpose: Evaluate contractor performance.</p>
+      <ul>
+        <li>KPIs: Total Routes, Planned Stops, Completed Stops, Completion Rate</li>
+        <li>Table (Contractor, Completed Routes, Completed Stops, Incomplete Stops, Ratings)</li>
+      </ul>
+    </section>
+
+    <!-- 20 -->
+    <section>
+      <h2>20. Reports – Route Billing</h2>
+      <p class="purpose">Purpose: Compare estimated vs actual billing.</p>
+      <ul>
+        <li>KPIs: Total Routes, Est. Total Rate, Actual Final Rate, Variance</li>
+        <li>Table (Route, Est. Rate, Final Rate, Variance, Status)</li>
+      </ul>
+    </section>
+
+    <!-- 21 -->
+    <section>
+      <h2>21. Reports – Stop Performance</h2>
+      <p class="purpose">Purpose: Analyze stop-level performance.</p>
+      <ul>
+        <li>KPIs: Planned Stops, Completed Stops, Incomplete Stops, Delayed Stops</li>
+        <li>Incomplete Reasons, Delay Reasons</li>
+      </ul>
+    </section>
+
+    <!-- Final Summary -->
+    <section>
+      <h2>✅ Final CEO-Shocker Summary</h2>
+      <ul>
+        <li>3PL Dashboard = Control Tower</li>
+        <li>Routes = Heartbeat of Operations</li>
+        <li>Billing = Cash Register</li>
+        <li>Reports = Investor’s Goldmine</li>
+        <li>Settings = Identity & Compliance</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 LMDXPS Documentation – Designed for clarity & impact
+  </footer>
+</body>
+</html>

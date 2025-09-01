@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LMDXPS Documentation – 3PL Company User</title>
+  <title>LMDXPS – User Documentation (3PL Company Role)</title>
   <style>
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -43,13 +43,20 @@
       border-bottom: 2px solid #eaeaea;
       padding-bottom: 0.5rem;
     }
-    .purpose {
-      font-style: italic;
-      color: #555;
-      margin-bottom: 1rem;
+    .when {
+      font-weight: bold;
+      color: #0077ff;
+      margin-top: 1rem;
     }
-    ul {
+    .steps {
       margin: 0.5rem 0 1rem 1.5rem;
+    }
+    .result {
+      background: #f1f7ff;
+      border-left: 4px solid #0077ff;
+      padding: 0.8rem 1rem;
+      margin-top: 1rem;
+      border-radius: 4px;
     }
     footer {
       text-align: center;
@@ -61,245 +68,360 @@
 </head>
 <body>
   <header>
-    <h1>📑 LMDXPS Documentation – 3PL Company User</h1>
+    <h1>📑 LMDXPS – User Documentation (3PL Company Role)</h1>
   </header>
 
   <div class="container">
 
+    <!-- Section 1 -->
     <section>
       <h2>1. Login Screen</h2>
-      <p class="purpose">Purpose: Allow 3PL companies and contractors to securely log in and access the system.</p>
-      <ul>
-        <li>Email (input)</li>
-        <li>Password (input, masked)</li>
-        <li>Remember Me (checkbox)</li>
-        <li>Forgot Password (link)</li>
-        <li>Login (button)</li>
-        <li>Sign Up (link for new users)</li>
-        <li>Driver Login (separate link for drivers)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To access the system as a 3PL company or contractor.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Enter your Email Address.</li>
+        <li>Enter your Password.</li>
+        <li>(Optional) Check Remember Me to stay logged in.</li>
+        <li>Click Login.</li>
+        <li>If you forgot your password, click Forgot Password?.</li>
+        <li>If you are new, click Sign Up.</li>
+        <li>If you are a driver, use the Driver Login link.</li>
+      </ol>
+      <div class="result">Result: You are logged into the system and redirected to the Dashboard.</div>
     </section>
 
+    <!-- Section 2 -->
     <section>
       <h2>2. Dashboard</h2>
-      <p class="purpose">Purpose: Give the 3PL company a bird’s-eye view of operations: active routes, completed routes, and pending requests.</p>
-      <ul>
-        <li>Active Routes (card)</li>
-        <li>Completed Routes (card)</li>
-        <li>Pending Route Requests (card)</li>
-        <li>Completed Routes with no Invoice (table)</li>
-        <li>Top 10 Upcoming Deliveries (table)</li>
-        <li>Post Route (button)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To get a quick overview of your logistics operations.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>After login, you land on the Dashboard.</li>
+        <li>Review the top cards:
+          <ul>
+            <li>Active Routes → shows open & booked routes.</li>
+            <li>Completed Routes → shows finished routes.</li>
+            <li>Pending Route Requests → shows requests waiting for approval.</li>
+          </ul>
+        </li>
+        <li>Scroll down to see:
+          <ul>
+            <li>Completed Routes with no Invoice yet → routes done but not billed.</li>
+            <li>Top 10 Upcoming Deliveries → next deliveries scheduled.</li>
+          </ul>
+        </li>
+        <li>To create a new route, click + Post Route.</li>
+      </ol>
+      <div class="result">Result: You can monitor the health of your logistics operation at a glance.</div>
     </section>
 
+    <!-- Section 3 -->
     <section>
       <h2>3. Post Route</h2>
-      <p class="purpose">Purpose: Enable 3PLs to create and publish new transportation routes for contractors to accept.</p>
-      <ul>
-        <li>Custom Route Number (input)</li>
-        <li>Warehouse ID (dropdown)</li>
-        <li>Truck Size Needed (dropdown)</li>
-        <li>Payment Method (radio: Paid by 3PL / Paid through LMDXPS)</li>
-        <li>Route Rate Based On (radio: Estimated Rate, Per Stop, % of Item Value)</li>
-        <li>Estimated Route Rate (number input)</li>
-        <li>Product Types (multi-select)</li>
-        <li>Number of Pieces (number input)</li>
-        <li>Number of Stops (number input)</li>
-        <li>Cubes (capacity input)</li>
-        <li>Pickup Date/Time (date & time picker)</li>
-        <li>Pickup Location / Furthest Location (text input)</li>
-        <li>Total Distance in Miles (number input)</li>
-        <li>Is 3-Man Team Needed? (yes/no)</li>
-        <li>Distance Pay? (yes/no)</li>
-        <li>Notes (textarea)</li>
-        <li>Next / Cancel Route (buttons)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To create and publish a new transportation route.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>From the sidebar, go to Routes → Post Route.</li>
+        <li>Fill in required details:
+          <ul>
+            <li>Custom Route Number (e.g., LIV-ABC-01).</li>
+            <li>Warehouse ID (select from dropdown).</li>
+            <li>Truck Size Needed (12ft, 18ft, 26ft).</li>
+            <li>Payment Method (Paid by 3PL / Paid through LMDXPS).</li>
+            <li>Route Rate Based On (Estimated Rate, Per Stop, % of Item Value).</li>
+            <li>Estimated Route Rate.</li>
+            <li>Product Types (multi-select).</li>
+            <li>Number of Pieces, Stops, Cubes.</li>
+            <li>Pickup Date, Time, Location, Furthest Location.</li>
+            <li>Total Distance in Miles.</li>
+            <li>Is 3-Man Team Needed? (Yes/No).</li>
+            <li>Distance Pay? (Yes/No).</li>
+            <li>Notes (optional).</li>
+          </ul>
+        </li>
+        <li>Click Next to continue or Cancel Route to discard.</li>
+      </ol>
+      <div class="result">Result: The route is created and becomes visible to contractors.</div>
     </section>
 
+    <!-- Section 4 -->
     <section>
       <h2>4. Post Routes in Bulk</h2>
-      <p class="purpose">Purpose: Allow 3PLs to upload multiple routes at once (time-saving for large operations).</p>
-      <ul>
-        <li>Upload (button)</li>
-        <li>Download Template (link)</li>
-        <li>Routes Table (Warehouse ID, Truck Size, Est. Rate, Stops, Actions)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To upload multiple routes at once.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Routes → Post Routes in Bulk.</li>
+        <li>Click Download Template to get the Excel/CSV format.</li>
+        <li>Fill in your routes in the template.</li>
+        <li>Click Upload to import them.</li>
+        <li>Review the table to confirm routes are added.</li>
+      </ol>
+      <div class="result">Result: Multiple routes are created in one action.</div>
     </section>
 
+    <!-- Section 5 -->
     <section>
       <h2>5. Active Routes</h2>
-      <p class="purpose">Purpose: Track all ongoing routes (open or booked).</p>
-      <ul>
-        <li>Search (input)</li>
-        <li>Filters (Warehouse, Contractor, Date)</li>
-        <li>Tabs: Open / Booked</li>
-        <li>Routes Table (Route No, Contractor Requests, Status, Stops, Pickup Date/Time, Warehouse ID)</li>
-        <li>Post New Route (button)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To track all ongoing routes.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Routes → Active Routes.</li>
+        <li>Use filters (Warehouse, Contractor, Date) to narrow results.</li>
+        <li>Switch between Open and Booked tabs.</li>
+        <li>Review the table: Route No, Contractor Requests, Status, Stops, Pickup Date/Time.</li>
+        <li>To add a new one, click + Post New Route.</li>
+      </ol>
+      <div class="result">Result: You can see which routes are currently in progress.</div>
     </section>
 
+    <!-- Section 6 -->
     <section>
       <h2>6. Completed Routes</h2>
-      <p class="purpose">Purpose: View all finished routes and their final status.</p>
-      <ul>
-        <li>Filters (Warehouse, Contractor, Date)</li>
-        <li>Routes Table (Route, Contractor, Truck, Driver, Status, Final Rate, Est. Rate)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To review all finished routes.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Routes → Completed Routes.</li>
+        <li>Use filters to search by Warehouse, Contractor, or Date.</li>
+        <li>Review details: Contractor, Truck, Driver, Status, Final Rate.</li>
+      </ol>
+      <div class="result">Result: You can confirm which routes are done and ready for billing.</div>
     </section>
 
+    <!-- Section 7 -->
     <section>
       <h2>7. Cancelled Routes</h2>
-      <p class="purpose">Purpose: Track cancelled routes for accountability and analysis.</p>
-      <ul>
-        <li>Filters (Warehouse, Contractor, Date)</li>
-        <li>Routes Table (Route, Contractor, Truck, Driver, Warehouse, Status, Posted At)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To track cancelled routes.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Routes → Cancelled Routes.</li>
+        <li>Use filters to search by Warehouse, Contractor, or Date.</li>
+        <li>Review details: Contractor, Truck, Driver, Warehouse, Status, Posted At.</li>
+      </ol>
+      <div class="result">Result: You can analyze cancellations for accountability.</div>
     </section>
 
+    <!-- Section 8 -->
     <section>
       <h2>8. Route Logs</h2>
-      <p class="purpose">Purpose: Provide a history of all route-related actions.</p>
-      <ul>
-        <li>Search (input)</li>
-        <li>Date Range (from/to)</li>
-        <li>Logs Table (Date, Route, Details, Action By)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To see the history of actions taken on routes.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Routes → Route Logs.</li>
+        <li>Use the date range filter.</li>
+        <li>Review logs: Date, Route, Details, Action By.</li>
+      </ol>
+      <div class="result">Result: You have a full audit trail of route activity.</div>
     </section>
 
+    <!-- Section 9 -->
     <section>
       <h2>9. Contractors – Available Trucks</h2>
-      <p class="purpose">Purpose: Show available trucks from contractors for assignment.</p>
-      <ul>
-        <li>Table (Contractor, Truck Type, Driver, Status, Date, Product Type, Location)</li>
-        <li>Pagination</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To see trucks available from contractors.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Contractors → Available Trucks.</li>
+        <li>Review the table: Contractor, Truck Type, Driver, Status, Date, Product Type, Location.</li>
+        <li>Use pagination to browse more results.</li>
+      </ol>
+      <div class="result">Result: You can match available trucks with your routes.</div>
     </section>
 
+    <!-- Section 10 -->
     <section>
       <h2>10. Contractors – My Truck Requests</h2>
-      <p class="purpose">Purpose: Track trucks requested by the 3PL.</p>
-      <ul>
-        <li>Filters (Date Range, Request Status)</li>
-        <li>Table (Needed Date, 3PL, Driver, Truck, Route, Date Sent, Status)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To track trucks you requested.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Contractors → My Truck Requests.</li>
+        <li>Use filters (Date Range, Request Status).</li>
+        <li>Review the table: Needed Date, 3PL, Driver, Truck, Route, Date Sent, Status.</li>
+      </ol>
+      <div class="result">Result: You can monitor the status of your truck requests.</div>
     </section>
 
+    <!-- Section 11 -->
     <section>
       <h2>11. Billing – Invoices</h2>
-      <p class="purpose">Purpose: Manage invoices for completed routes.</p>
-      <ul>
-        <li>Filter by Invoice Type</li>
-        <li>Table (Invoice No, Paid For, Issued Date, Due Date, Status, Transaction Status, Payment Direction)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To manage invoices for completed routes.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Billing → Invoices.</li>
+        <li>Use filters to search by invoice type.</li>
+        <li>Review the table: Invoice No, Paid For, Issued Date, Due Date, Status, Transaction Status, Payment Direction.</li>
+      </ol>
+      <div class="result">Result: You can track payments and outstanding invoices.</div>
     </section>
 
+    <!-- Section 12 -->
     <section>
       <h2>12. Messages & Issues – Raise an Issue</h2>
-      <p class="purpose">Purpose: Allow 3PLs to report problems (address, delays, contractor issues).</p>
-      <ul>
-        <li>Issue Type (dropdown)</li>
-        <li>Issue Title (input)</li>
-        <li>Route (dropdown)</li>
-        <li>Issue Details (textarea)</li>
-        <li>Submit (button)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To report a problem with a route.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Messages & Issues → Raise an Issue.</li>
+        <li>Select Issue Type (e.g., Address, Delay).</li>
+        <li>Enter Issue Title.</li>
+        <li>Select the Route.</li>
+        <li>Enter Issue Details.</li>
+        <li>Click Submit.</li>
+      </ol>
+      <div class="result">Result: The issue is logged and can be tracked by support.</div>
     </section>
 
+    <!-- Section 13 -->
     <section>
       <h2>13. Settings – Personal Details</h2>
-      <p class="purpose">Purpose: Manage personal account details.</p>
-      <ul>
-        <li>First Name, Last Name, Email (inputs)</li>
-        <li>Edit (button)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To update your personal account details.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Settings → Personal Details.</li>
+        <li>Edit First Name, Last Name, Email.</li>
+        <li>Click Save.</li>
+      </ol>
+      <div class="result">Result: Your personal details are updated.</div>
     </section>
 
+    <!-- Section 14 -->
     <section>
       <h2>14. Settings – Company Details</h2>
-      <p class="purpose">Purpose: Store company-level information and compliance documents.</p>
-      <ul>
-        <li>Company Name, Owner Name, Email, Phone, Address, City, State, Zip</li>
-        <li>FEIN#, USMC#, USDOT#, Expiration Date</li>
-        <li>Profile Description</li>
-        <li>MCP Permits (Number, Expiration, State)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To manage company-level information and compliance.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Settings → Company Details.</li>
+        <li>Fill in: Company Name, Owner Name, Email, Phone, Address, City, State, Zip.</li>
+        <li>Add compliance numbers: FEIN, USMC, USDOT, Expiration Date.</li>
+        <li>Add Profile Description.</li>
+        <li>Add MCP Permits (Number, Expiration, State).</li>
+        <li>Click Save.</li>
+      </ol>
+      <div class="result">Result: Your company profile and compliance data are stored.</div>
     </section>
 
+    <!-- Section 15 -->
     <section>
       <h2>15. Settings – Warehouses</h2>
-      <p class="purpose">Purpose: Manage warehouse details.</p>
-      <ul>
-        <li>Warehouse ID, Phone, Product Types</li>
-        <li>Address, City, State, Zip</li>
-        <li>Warehouse Policies</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To manage warehouse details.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Settings → Warehouses.</li>
+        <li>Add or edit Warehouse ID, Phone, Product Types.</li>
+        <li>Enter Address, City, State, Zip.</li>
+        <li>Add Warehouse Policies.</li>
+        <li>Click Save.</li>
+      </ol>
+      <div class="result">Result: Warehouses are registered and ready for route assignments.</div>
     </section>
 
+    <!-- Section 16 -->
     <section>
       <h2>16. Settings – Subscription Plan</h2>
-      <p class="purpose">Purpose: Allow 3PLs to choose a subscription tier.</p>
-      <ul>
-        <li>Plans: Essential, Pro, Elite, Titan</li>
-        <li>Pricing (per month)</li>
-        <li>Features (routes, truck access, dispatch, invoices)</li>
-        <li>Subscribe (button)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To choose or upgrade your subscription.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Settings → Subscription Plan.</li>
+        <li>Review available plans (Essential, Pro, Elite, Titan).</li>
+        <li>Compare features (routes, truck access, dispatch, invoices).</li>
+        <li>Click Subscribe on your chosen plan.</li>
+      </ol>
+      <div class="result">Result: Your account is upgraded to the selected plan.</div>
     </section>
 
+    <!-- Section 17 -->
     <section>
       <h2>17. Settings – Account Logs</h2>
-      <p class="purpose">Purpose: Track account activity (sign-ins, sign-ups).</p>
-      <ul>
-        <li>Table (Date, Action Type, Details, Action By)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To track account activity.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Settings → Account Logs.</li>
+        <li>Use date filters.</li>
+        <li>Review logs: Date, Action Type (Signin/Signup), Details, Action By.</li>
+      </ol>
+      <div class="result">Result: You can monitor account usage and security.</div>
     </section>
 
+    <!-- Section 18 -->
     <section>
       <h2>18. Reports – Route Performance</h2>
-      <p class="purpose">Purpose: Measure performance of routes.</p>
-      <ul>
-        <li>KPIs: Number of Routes, Planned Stops, Completed Stops, Completion Rate</li>
-        <li>Filters (Date, Warehouse, Status, Rate Status)</li>
-        <li>Export (button)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To measure performance of routes.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Reports → Route Performance.</li>
+        <li>Review KPIs: Number of Routes, Planned Stops, Completed Stops, Completion Rate.</li>
+        <li>Use filters (Date, Warehouse, Status, Rate Status).</li>
+        <li>Export report if needed.</li>
+      </ol>
+      <div class="result">Result: You can analyze how well routes are being executed.</div>
     </section>
 
+    <!-- Section 19 -->
     <section>
       <h2>19. Reports – Contractor Performance</h2>
-      <p class="purpose">Purpose: Evaluate contractor performance.</p>
-      <ul>
-        <li>KPIs: Total Routes, Planned Stops, Completed Stops, Completion Rate</li>
-        <li>Table (Contractor, Completed Routes, Completed Stops, Incomplete Stops, Ratings)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To evaluate contractor performance.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Reports → Contractor Performance.</li>
+        <li>Review KPIs: Total Routes, Planned Stops, Completed Stops, Completion Rate.</li>
+        <li>Review table: Contractor, Completed Routes, Completed Stops, Incomplete Stops, Ratings.</li>
+      </ol>
+      <div class="result">Result: You can identify top-performing and underperforming contractors.</div>
     </section>
 
+    <!-- Section 20 -->
     <section>
       <h2>20. Reports – Route Billing</h2>
-      <p class="purpose">Purpose: Compare estimated vs actual billing.</p>
-      <ul>
-        <li>KPIs: Total Routes, Est. Total Rate, Actual Final Rate, Variance</li>
-        <li>Table (Route, Est. Rate, Final Rate, Variance, Status)</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To compare estimated vs actual billing.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Reports → Route Billing.</li>
+        <li>Review KPIs: Total Routes, Est. Total Rate, Actual Final Rate, Variance.</li>
+        <li>Review table: Route, Est. Rate, Final Rate, Variance, Status.</li>
+      </ol>
+      <div class="result">Result: You can track financial accuracy of routes.</div>
     </section>
 
+    <!-- Section 21 -->
     <section>
       <h2>21. Reports – Stop Performance</h2>
-      <p class="purpose">Purpose: Analyze stop-level performance.</p>
-      <ul>
-        <li>KPIs: Planned Stops, Completed Stops, Incomplete Stops, Delayed Stops</li>
-        <li>Incomplete Reasons, Delay Reasons</li>
-      </ul>
+      <p class="when">When to use:</p>
+      <p>To analyze stop-level performance.</p>
+      <p class="when">Steps:</p>
+      <ol class="steps">
+        <li>Go to Reports → Stop Performance.</li>
+        <li>Review KPIs: Planned Stops, Completed Stops, Incomplete Stops, Delayed Stops.</li>
+        <li>Review reasons for incomplete or delayed stops.</li>
+      </ol>
+      <div class="result">Result: You can identify bottlenecks at the stop level.</div>
     </section>
 
+    <!-- Final Summary -->
     <section>
       <h2>✅ Final Summary</h2>
       <ul>
-        <li>3PL Dashboard = Control Tower</li>
-        <li>Routes = Heartbeat of Operations</li>
-        <li>Billing = Cash Register</li>
-        <li>Reports = Investor’s Goldmine</li>
-        <li>Settings = Identity & Compliance</li>
+        <li>Dashboard = Control Tower (overview of operations).</li>
+        <li>Routes = Heartbeat (where money moves).</li>
+        <li>Billing = Cash Register (where money is counted).</li>
+        <li>Reports = Investor’s Goldmine (data-driven decisions).</li>
+        <li>Settings = Identity & Compliance (trust + legal backbone).</li>
       </ul>
     </section>
 
